@@ -7,9 +7,13 @@ import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { GrLinkedin } from 'react-icons/gr';
 import { GoMarkGithub } from 'react-icons/go'
 
+import NavBar from './nav/navbar';
+
 export default function Home() {
   return (
     <div>
+      <NavBar />
+
       <main className='bg-white px-10 md:px-20 lg:px-40'>
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between'>
