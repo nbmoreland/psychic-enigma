@@ -1,6 +1,6 @@
 "use client";
 
-import NavBar from "./nav/navbar";
+import NavBar from "../nav/navbar";
 import { useState } from "react";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
 
         <section className="min-h-screen">
           <div className="lg:flex gap-10 mx-4 my-4">
-            <h1>Welcome to the home page</h1>
+            <h1>Welcome to the about page.</h1>
           </div>
         </section>
       </main>
