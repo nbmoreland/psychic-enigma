@@ -1,15 +1,47 @@
 "use client";
 
 import Image from "next/image";
-import cherry from "../public/pattern-of-fresh-cherries-on-pink-background-GEMF03873.jpg";
-import code from "../public/code.png";
+import { DiGithubFull } from "react-icons/di";
+import imageone from "../public/image-1.jpg";
 import consulting from "../public/consulting.png";
 
 import NavBar from "./nav/navbar";
 import { useState } from "react";
 
+/*
+                <Image
+                  src={cherry}
+                  width={400}
+                  height={200}
+                  alt={""}
+                  className="rounded-tr-xl rounded-tl-xl"
+                />
+*/
+
+/*
+                <a
+                  href="#"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Read more
+                  <svg
+                    aria-hidden="true"
+                    className="w-4 h-4 ml-2 -mr-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </a>
+*/
+
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -18,46 +50,59 @@ export default function Home() {
 
         <section className="min-h-screen">
           <div className="lg:flex gap-10 mx-4 my-4">
-            <div className="bg-white text-center shadow-lg rounded-xl flex flex-col">
-              <div className="border-slate-900/10 dark:border-slate-300/10 w-96 align-top mb-10">
-                <Image
-                  src={cherry}
-                  width={400}
-                  height={200}
-                  alt={""}
-                  className="rounded-tr-xl rounded-tl-xl"
+            <div className="max-w-md bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700">
+              <Image className="rounded-t-xl" src={imageone} alt="" />
+              <div className="px-4 pt-5 pb-3">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Project One
+                </h5>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  Details about project one.
+                </p>
+              </div>
+              <div className="flex justify-end pr-3 rounded-b-xl">
+                <DiGithubFull
+                  href=""
+                  size="48"
+                  className="cursor-pointer text-xl block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
                 />
-
-                <h3 className="text-lg font-medium pt-1">Project Cherry</h3>
               </div>
             </div>
-
-            <div className="dark:bg-white text-center shadow-lg p-10 rounded-xl my-10 flex flex-col justify-center items-center">
-              <Image src={code} width={100} height={100} alt={""} />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beatiful Designs
-              </h3>
-              <p className="py-2">
-                Creating elegant designs suited from your needs.
-              </p>
-              <h4 className="text-teal-600 py-4">Design tools I use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
+            <div className="max-w-md bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700">
+              <Image className="rounded-t-xl" src={imageone} alt="" />
+              <div className="px-4 pt-5 pb-3">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Project Two
+                </h5>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  Details about project two.
+                </p>
+              </div>
+              <div className="flex justify-end pr-3 rounded-b-xl">
+                <DiGithubFull
+                  href=""
+                  size="48"
+                  className="cursor-pointer text-xl block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
+                />
+              </div>
             </div>
-
-            <div className="dark:bg-white text-center shadow-lg p-10 rounded-xl my-10 flex flex-col justify-center items-center">
-              <Image src={consulting} width={100} height={100} alt={""} />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beatiful Designs
-              </h3>
-              <p className="py-2">
-                Creating elegant designs suited from your needs.
-              </p>
-              <h4 className="text-teal-600 py-4">Design tools I use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
+            <div className="max-w-md bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700">
+              <Image className="rounded-t-xl" src={imageone} alt="" />
+              <div className="px-4 pt-5 pb-3">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Project Three
+                </h5>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  Details about project three.
+                </p>
+              </div>
+              <div className="flex justify-end pr-3 rounded-b-xl">
+                <DiGithubFull
+                  href=""
+                  size="48"
+                  className="cursor-pointer text-xl block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
+                />
+              </div>
             </div>
           </div>
         </section>
