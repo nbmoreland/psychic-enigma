@@ -10,7 +10,7 @@ export default function SkillCard({
   icon: React.ReactNode;
 }) {
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden w-64 h-80 m-4">
+    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden w-72 m-4 shrink-0">
       <div className="p-4">
         {icon}
         <h3 className="font-bold text-xl mb-2">{title}</h3>
