@@ -3,7 +3,9 @@
 import NavBar from "./nav/navbar";
 import ProjectCard from "./components/ProjectCard";
 import SkillCard from "./components/SkillCard";
-import stock from "../public/stock.jpg";
+import devnick from "../public/dev-nick-wave.png";
+
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
@@ -15,27 +17,24 @@ export default function Home() {
         <NavBar />
 
         <section className="min-h-screen">
-          <div className="lg:flex gap-10 mx-4 my-4">
-            <div className="lg:w-1/2">
+          <div className="mx-auto max-w-7xl mt-12 py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+            <div className="lg:text-center">
               <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-                Hi, I'm John Doe
+                Hi, I'm Nicholas Moreland
               </h1>
-              <p className="mt-6 text-xl text-gray-700 dark:text-gray-400">
-                I'm a full-time student and aspiring software developer. I'm
+              <p className="mt-8 text-xl text-gray-700 dark:text-gray-400">
+                I'm a full-time student and aspiring software engineer. I'm
                 passionate about creating clean and efficient code that solves
                 real-world problems.
               </p>
-              <button
-                className="mt-6 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500 focus:outline-none"
-                onClick={() => alert("Contact me!")}
-              >
-                Contact me
-              </button>
             </div>
-            <div className="lg:w-1/2">
-              <img
-                className="rounded-full w-64 h-64 object-cover mx-auto"
-                src="https://via.placeholder.com/300.png/09f/fff"
+            <div
+              className="relative mx-auto bg-gradient-to-b from-purple-400 via-purple-500 to-purple-600
+ rounded-full w-80 h-80 mt-20 overflow-hidden"
+            >
+              <Image
+                src={devnick}
+                className="rounded-full object-cover w-full h-full"
                 alt="Profile"
               />
             </div>
