@@ -18,26 +18,23 @@ export default function ProjectSection({}) {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap xl:flex-nowrap justify-center m-2">
         <ProjectCard
           title="Project 1"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget."
           imageUrl="/../public/stock.jpg"
-          liveUrl=""
           githubUrl=""
         />
         <ProjectCard
           title="Project 2"
           description="Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis."
           imageUrl="/../public/stock.jpg"
-          liveUrl=""
           githubUrl=""
         />
         <ProjectCard
           title="Project 3"
           description="Nullam ac elit nec metus porttitor dignissim. Etiam ac lacus interdum, bibendum augue a, pharetra ante."
           imageUrl="/../public/stock.jpg"
-          liveUrl=""
           githubUrl=""
         />
       </div>
