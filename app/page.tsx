@@ -43,13 +43,13 @@ export default function Home() {
           </div>
         </section>
 
-        <motion.div className="snap-start min-h-screen bg-gray-50 dark:bg-gray-800">
+        <section className="snap-start min-h-screen bg-gray-50 dark:bg-gray-800">
           <ProjectSection />
-        </motion.div>
+        </section>
 
-        <motion.div className="snap-start min-h-screen bg-white dark:bg-gray-900">
+        <section className="snap-start min-h-screen bg-white dark:bg-gray-900">
           <SkillSection />
-        </motion.div>
+        </section>
       </main>
     </div>
   );

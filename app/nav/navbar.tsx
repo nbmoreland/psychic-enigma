@@ -30,11 +30,11 @@ export default function NavBar({}) {
 
             <div className="relative hidden lg:flex items-center ml-auto">
               <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
-                <ul className="flex space-x-8">
+                <ul className="flex space-x-2">
                   <li>
                     <Link
                       href="/resume"
-                      className="hover:text-sky-500 dark:hover:text-sky-400"
+                      className="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
                     >
                       Resume
                     </Link>
@@ -42,7 +42,7 @@ export default function NavBar({}) {
                   <li>
                     <Link
                       href="/projects"
-                      className="hover:text-sky-500 dark:hover:text-sky-400"
+                      className="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
                     >
                       Projects
                     </Link>
@@ -50,7 +50,7 @@ export default function NavBar({}) {
                   <li>
                     <Link
                       href="/about"
-                      className="hover:text-sky-500 dark:hover:text-sky-400"
+                      className="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
                     >
                       About
                     </Link>
