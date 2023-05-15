@@ -13,7 +13,7 @@ export default function NavBar({}) {
             <div className="flex items-center rounded-lg px-2">
               <Link
                 href="/"
-                className="hover:text-sky-500 dark:hover:text-sky-400 relative flex items-center"
+                className="relative flex items-center px-3 py-1 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
               >
                 <Image
                   src="https://avatars.githubusercontent.com/u/46201019?v=4"
