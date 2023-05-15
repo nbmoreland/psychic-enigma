@@ -1,4 +1,4 @@
-"use client";
+import { motion } from "framer-motion";
 
 export default function SkillCard({
   title,
@@ -10,7 +10,10 @@ export default function SkillCard({
   icon: React.ReactNode;
 }) {
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden w-72 m-4 shrink-0">
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden w-72 m-4 shrink-0"
+    >
       <div className="p-4">
         {icon}
         <h3 className="font-bold text-xl mb-2">{title}</h3>
@@ -18,6 +21,6 @@ export default function SkillCard({
           {description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }

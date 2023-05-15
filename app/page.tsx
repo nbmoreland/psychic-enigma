@@ -5,6 +5,7 @@ import ProjectSection from "./components/project/ProjectSection";
 import SkillSection from "./components/skill/SkillSection";
 import devnick from "../public/dev-nick-wave.png";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -28,7 +29,8 @@ export default function Home() {
                 real-world problems.
               </p>
             </div>
-            <div
+            <motion.div
+              whileHover={{ scale: 1.1, rotate: 360 }}
               className="relative mx-auto bg-gradient-to-b from-purple-400 via-purple-500 to-purple-600
  rounded-full w-80 h-80 mt-20 overflow-hidden"
             >
@@ -37,17 +39,17 @@ export default function Home() {
                 className="rounded-full object-cover w-full h-full"
                 alt="Profile"
               />
-            </div>
+            </motion.div>
           </div>
         </section>
 
-        <section className="snap-start min-h-screen bg-gray-50 dark:bg-gray-800">
+        <motion.div className="snap-start min-h-screen bg-gray-50 dark:bg-gray-800">
           <ProjectSection />
-        </section>
+        </motion.div>
 
-        <section className="snap-start min-h-screen bg-white dark:bg-gray-900">
+        <motion.div className="snap-start min-h-screen bg-white dark:bg-gray-900">
           <SkillSection />
-        </section>
+        </motion.div>
       </main>
     </div>
   );

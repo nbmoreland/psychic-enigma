@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function ProjectCard({
   title,
@@ -14,7 +15,10 @@ export default function ProjectCard({
   githubUrl: string;
 }) {
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden w-80 h-80 m-4">
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden w-80 h-80 m-4"
+    >
       <div className="relative h-48">
         <Image src={imageUrl} alt={title} fill style={{ objectFit: "cover" }} />
       </div>
@@ -42,6 +46,6 @@ export default function ProjectCard({
           GitHub
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }
