@@ -1,16 +1,17 @@
 "use client";
 
-import NavBar from "./nav/navbar";
+import Image from "next/image";
 import ProjectSection from "./components/project/ProjectSection";
 import SkillSection from "./components/skill/SkillSection";
 import devnick from "../public/dev-nick-wave.png";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { useState } from "react";
+import { NavBar } from "./nav/navbar";
+import { useContext } from "react";
+import { DarkModeContext } from "./components/DarkModeContext";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const { darkMode } = useContext(DarkModeContext);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -44,7 +45,7 @@ export default function Home() {
         </section>
 
         <section className="snap-start min-h-screen bg-gray-50 dark:bg-gray-800">
-          <ProjectSection />
+          <ProjectSection showcase={true} />
         </section>
 
         <section className="snap-start min-h-screen bg-white dark:bg-gray-900">

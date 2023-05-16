@@ -2,9 +2,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState, useContext } from "react";
+import { DarkModeContext } from "../components/DarkModeContext";
 import { RxMoon } from "react-icons/rx";
 
-export default function NavBar({}) {
+const NavBar = () => {
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
+
+  const handleToggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <div className="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
       <div className="max-w-8xl mx-auto">
@@ -33,18 +41,18 @@ export default function NavBar({}) {
                 <ul className="flex space-x-2">
                   <li>
                     <Link
-                      href="/resume"
-                      className="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
-                    >
-                      Resume
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
                       href="/projects"
                       className="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
                     >
                       Projects
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resume"
+                      className="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+                    >
+                      Resume
                     </Link>
                   </li>
                   <li>
@@ -58,7 +66,10 @@ export default function NavBar({}) {
                 </ul>
               </nav>
               <div className="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
-                <RxMoon className="cursor-pointer text-xl block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300" />
+                <RxMoon
+                  onClick={handleToggleDarkMode}
+                  className="cursor-pointer text-xl block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
+                />
                 <a
                   href="https://github.com/nicholasmoreland"
                   className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
@@ -100,4 +111,6 @@ export default function NavBar({}) {
       </div>
     </div>
   );
-}
+};
+
+export { NavBar };
