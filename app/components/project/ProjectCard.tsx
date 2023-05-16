@@ -15,7 +15,7 @@ export default function ProjectCard({
   return (
     <motion.div
       whileHover={{ scale: 1.1 }}
-      className="bg-white dark:bg-gray-900 rounded-lg shadow-xl overflow-hidden w-96 h-96 m-4"
+      className="bg-white dark:bg-gray-900 rounded-lg shadow-xl overflow-hidden w-96 h-96 m-4 shrink-0"
     >
       <div className="relative h-48">
         <Image src={imageUrl} alt={title} fill style={{ objectFit: "cover" }} />

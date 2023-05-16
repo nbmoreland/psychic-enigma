@@ -1,10 +1,71 @@
-"use client";
-
 import ProjectCard from "./ProjectCard";
 
-export default function ProjectSection({}) {
+const projects = [
+  {
+    title: "Project 1",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget.",
+    imageUrl: "/../public/stock.jpg",
+    githubUrl: "https://github.com/user/project1",
+  },
+  {
+    title: "Project 2",
+    description:
+      "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis",
+    imageUrl: "/../public/stock.jpg",
+    githubUrl: "https://github.com/user/project2",
+  },
+  {
+    title: "Project 3",
+    description:
+      "Nullam ac elit nec metus porttitor dignissim. Etiam ac lacus interdum, bibendum augue a, pharetra ante.",
+    imageUrl: "/../public/stock.jpg",
+    githubUrl: "https://github.com/user/project3",
+  },
+  {
+    title: "Project 4",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget.",
+    imageUrl: "/../public/stock.jpg",
+    githubUrl: "https://github.com/user/project1",
+  },
+  {
+    title: "Project 5",
+    description:
+      "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis",
+    imageUrl: "/../public/stock.jpg",
+    githubUrl: "https://github.com/user/project2",
+  },
+  {
+    title: "Project 7",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget.",
+    imageUrl: "/../public/stock.jpg",
+    githubUrl: "https://github.com/user/project1",
+  },
+  {
+    title: "Project 8",
+    description:
+      "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis",
+    imageUrl: "/../public/stock.jpg",
+    githubUrl: "https://github.com/user/project2",
+  },
+  {
+    title: "Project 9",
+    description:
+      "Nullam ac elit nec metus porttitor dignissim. Etiam ac lacus interdum, bibendum augue a, pharetra ante.",
+    imageUrl: "/../public/stock.jpg",
+    githubUrl: "https://github.com/user/project3",
+  },
+];
+
+export default function ProjectSection({ showcase }: { showcase: boolean }) {
+  let projects_displayed = projects;
+
+  if (showcase) projects_displayed = projects.slice(0, 3);
+
   return (
-    <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <div className="mx-auto min-w-screen pt-12 pb-2 px-2 lg:py-16 lg:px-8">
       <div className="lg:text-center">
         <h2 className="text-base text-indigo-600 dark:text-indigo-400 font-semibold tracking-wide uppercase">
           Projects
@@ -18,25 +79,16 @@ export default function ProjectSection({}) {
         </p>
       </div>
 
-      <div className="flex flex-wrap xl:flex-nowrap justify-center m-2">
-        <ProjectCard
-          title="Project 1"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget."
-          imageUrl="/../public/stock.jpg"
-          githubUrl=""
-        />
-        <ProjectCard
-          title="Project 2"
-          description="Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis."
-          imageUrl="/../public/stock.jpg"
-          githubUrl=""
-        />
-        <ProjectCard
-          title="Project 3"
-          description="Nullam ac elit nec metus porttitor dignissim. Etiam ac lacus interdum, bibendum augue a, pharetra ante."
-          imageUrl="/../public/stock.jpg"
-          githubUrl=""
-        />
+      <div className="flex flex-row flex-wrap justify-center mt-3 m-2">
+        {projects_displayed.map((project, index) => (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            description={project.description}
+            imageUrl={project.imageUrl}
+            githubUrl={project.githubUrl}
+          />
+        ))}
       </div>
     </div>
   );
