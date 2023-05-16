@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState, useContext } from "react";
+import { motion } from "framer-motion";
+import { useContext } from "react";
 import { DarkModeContext } from "../components/DarkModeContext";
 import { RxMoon } from "react-icons/rx";
 
@@ -18,7 +19,10 @@ const NavBar = () => {
       <div className="max-w-8xl mx-auto">
         <div className="py-2 border-b border-slate-900/10 lg:px-8 lg:border-0 dark:border-slate-300/10 mx-4 lg:mx-0">
           <div className="relative flex items-center">
-            <div className="flex items-center rounded-lg px-2">
+            <motion.div
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center rounded-lg px-2"
+            >
               <Link
                 href="/"
                 className="relative flex items-center px-3 py-1 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
@@ -34,35 +38,35 @@ const NavBar = () => {
                   <h1>Nicholas Moreland</h1>
                 </div>
               </Link>
-            </div>
+            </motion.div>
 
             <div className="relative hidden lg:flex items-center ml-auto">
               <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
                 <ul className="flex space-x-2">
-                  <li>
+                  <motion.li whileTap={{ scale: 0.95 }}>
                     <Link
                       href="/projects"
                       className="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
                     >
                       Projects
                     </Link>
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li whileTap={{ scale: 0.95 }}>
                     <Link
                       href="/resume"
                       className="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
                     >
                       Resume
                     </Link>
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li whileTap={{ scale: 0.95 }}>
                     <Link
                       href="/about"
                       className="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
                     >
                       About
                     </Link>
-                  </li>
+                  </motion.li>
                 </ul>
               </nav>
               <div className="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
