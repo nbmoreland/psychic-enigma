@@ -45,10 +45,7 @@ export default function Home() {
         </section>
 
         <section className="snap-start min-h-screen bg-gray-50 dark:bg-gray-800">
-          <ProjectSection
-            showcase={true}
-            img={"/../public/dev-nick-wave.png"}
-          />
+          <ProjectSection showcase={true} />
         </section>
 
         <section className="snap-start min-h-screen bg-white dark:bg-gray-900">

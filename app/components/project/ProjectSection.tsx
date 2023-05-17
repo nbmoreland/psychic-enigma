@@ -1,4 +1,5 @@
 import ProjectCard from "./ProjectCard";
+import stockcard from "../../../public/stock.jpg";
 
 const projects = [
   {
@@ -59,13 +60,7 @@ const projects = [
   },
 ];
 
-export default function ProjectSection({
-  showcase,
-  img,
-}: {
-  showcase: boolean;
-  img: string;
-}) {
+export default function ProjectSection({ showcase }: { showcase: boolean }) {
   let projects_displayed = projects;
 
   if (showcase) projects_displayed = projects.slice(0, 3);
@@ -91,7 +86,7 @@ export default function ProjectSection({
             key={index}
             title={project.title}
             description={project.description}
-            imageUrl={img}
+            image_uri={stockcard}
             githubUrl={project.githubUrl}
           />
         ))}

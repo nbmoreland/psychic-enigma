@@ -1,15 +1,15 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 
 export default function ProjectCard({
   title,
   description,
-  imageUrl,
+  image_uri,
   githubUrl,
 }: {
   title: string;
   description: string;
-  imageUrl: string;
+  image_uri: StaticImageData;
   githubUrl: string;
 }) {
   return (
@@ -18,7 +18,12 @@ export default function ProjectCard({
       className="bg-white dark:bg-gray-900 rounded-lg shadow-xl overflow-hidden w-96 h-96 m-4 shrink-0"
     >
       <div className="relative h-48">
-        <Image src={imageUrl} alt={title} fill style={{ objectFit: "cover" }} />
+        <Image
+          src={image_uri}
+          alt={title}
+          fill
+          style={{ objectFit: "cover" }}
+        />
       </div>
       <div className="p-4">
         <h3 className="font-bold text-xl mb-2">{title}</h3>
