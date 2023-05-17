@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white dark:bg-gray-900">
-        <NavBar dark={darkMode} />
+        <NavBar />
 
         <section className="snap-start min-h-screen">
           <div className="mx-auto max-w-7xl mt-12 py-12 px-4 sm:px-6 lg:py-16 lg:px-8">

@@ -7,7 +7,7 @@ import { useState } from "react";
 import { RxMoon } from "react-icons/rx";
 import { IoReorderThreeOutline, IoCloseOutline } from "react-icons/io5";
 
-const NavBar = ({ dark }: { dark: boolean }) => {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

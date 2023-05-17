@@ -3,14 +3,12 @@
 import { NavBar } from "../nav/navbar";
 import ProjectSection from "../components/project/ProjectSection";
 
-export default function ProjectsPage({ dark }: { dark: boolean }) {
+export default function ProjectsPage() {
   return (
-    <div className={dark ? "dark" : ""}>
-      <main className="bg-white dark:bg-gray-900 min-h-screen">
-        <NavBar dark={dark} />
+    <main className="bg-white dark:bg-gray-900 min-h-screen">
+      <NavBar />
 
-        <ProjectSection showcase={false} />
-      </main>
-    </div>
+      <ProjectSection showcase={false} />
+    </main>
   );
 }
