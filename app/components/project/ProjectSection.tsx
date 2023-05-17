@@ -5,56 +5,56 @@ const projects = [
     title: "Project 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget.",
-    imageUrl: "/../public/stock.jpg",
+    imageUrl: "/../public/static/images/stock.jpg",
     githubUrl: "https://github.com/user/project1",
   },
   {
     title: "Project 2",
     description:
       "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis",
-    imageUrl: "/../public/stock.jpg",
+    imageUrl: "/../public/static/images/stock.jpg",
     githubUrl: "https://github.com/user/project2",
   },
   {
     title: "Project 3",
     description:
       "Nullam ac elit nec metus porttitor dignissim. Etiam ac lacus interdum, bibendum augue a, pharetra ante.",
-    imageUrl: "/../public/stock.jpg",
+    imageUrl: "/../public/static/images/stock.jpg",
     githubUrl: "https://github.com/user/project3",
   },
   {
     title: "Project 4",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget.",
-    imageUrl: "/../public/stock.jpg",
+    imageUrl: "/../public/static/images/stock.jpg",
     githubUrl: "https://github.com/user/project1",
   },
   {
     title: "Project 5",
     description:
       "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis",
-    imageUrl: "/../public/stock.jpg",
+    imageUrl: "/../public/static/images/stock.jpg",
     githubUrl: "https://github.com/user/project2",
   },
   {
     title: "Project 7",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget.",
-    imageUrl: "/../public/stock.jpg",
+    imageUrl: "/../public/static/images/stock.jpg",
     githubUrl: "https://github.com/user/project1",
   },
   {
     title: "Project 8",
     description:
       "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis",
-    imageUrl: "/../public/stock.jpg",
+    imageUrl: "/../public/static/images/stock.jpg",
     githubUrl: "https://github.com/user/project2",
   },
   {
     title: "Project 9",
     description:
       "Nullam ac elit nec metus porttitor dignissim. Etiam ac lacus interdum, bibendum augue a, pharetra ante.",
-    imageUrl: "/../public/stock.jpg",
+    imageUrl: "/../public/static/images/stock.jpg",
     githubUrl: "https://github.com/user/project3",
   },
 ];
