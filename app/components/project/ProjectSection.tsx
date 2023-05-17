@@ -12,7 +12,7 @@ const projects = [
   {
     title: "Project 2",
     description:
-      "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis",
+      "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis. Aiacs aw oecae.",
     imageUrl: "/../public/static/images/dev-nick-wave.png",
     githubUrl: "https://github.com/user/project2",
   },
@@ -33,26 +33,26 @@ const projects = [
   {
     title: "Project 5",
     description:
-      "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis",
+      "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis. Aiacs aw oecae.",
     imageUrl: "../public/static/images/stock.jpg",
     githubUrl: "https://github.com/user/project2",
   },
   {
-    title: "Project 7",
+    title: "Project 6",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget.",
     imageUrl: "../public/static/images/stock.jpg",
     githubUrl: "https://github.com/user/project1",
   },
   {
-    title: "Project 8",
+    title: "Project 7",
     description:
-      "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis",
+      "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis. Aiacs aw oecae.",
     imageUrl: "../public/static/images/stock.jpg",
     githubUrl: "https://github.com/user/project2",
   },
   {
-    title: "Project 9",
+    title: "Project 8",
     description:
       "Nullam ac elit nec metus porttitor dignissim. Etiam ac lacus interdum, bibendum augue a, pharetra ante.",
     imageUrl: "../public/static/images/stock.jpg",

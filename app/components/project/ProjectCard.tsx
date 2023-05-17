@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
-import { IoCodeSharp } from "react-icons/io5";
+import { IoGitBranchOutline } from "react-icons/io5";
 
 export default function ProjectCard({
   title,
@@ -32,7 +32,7 @@ export default function ProjectCard({
           {description}
         </p>
       </div>
-      <div className="flex justify-end py-1.5 px-1.5 m-1 mt-4">
+      <div className="flex justify-end py-1.5px-1.5 mx-2 mt-4 mb-2">
         <motion.a
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
@@ -40,7 +40,7 @@ export default function ProjectCard({
           href="https://github.com/nicholasmoreland"
           className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
         >
-          <IoCodeSharp />
+          <IoGitBranchOutline className="fill-current h-7 w-7" />
         </motion.a>
       </div>
     </motion.div>
