@@ -71,7 +71,7 @@ export default function ProjectSection({ showcase }: { showcase: boolean }) {
           Projects
         </h2>
         <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-          Here are some projects I've worked on
+          Here are some projects I have worked on
         </p>
         <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
           These are some of my recent projects. Click on a project to learn more

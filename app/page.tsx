@@ -22,10 +22,10 @@ export default function Home() {
           <div className="mx-auto max-w-7xl mt-12 py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
             <div className="lg:text-center">
               <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-                Hi, I'm Nicholas Moreland
+                Hi, I am Nicholas Moreland
               </h1>
               <p className="mt-8 text-xl text-gray-700 dark:text-gray-400">
-                I'm a full-time student and aspiring software engineer. I'm
+                I am a full-time student and aspiring software engineer. I am
                 passionate about creating clean and efficient code that solves
                 real-world problems.
               </p>
