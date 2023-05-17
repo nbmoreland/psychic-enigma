@@ -5,14 +5,14 @@ const projects = [
     title: "Project 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget.",
-    imageUrl: "../public/static/images/stock.jpg",
+    imageUrl: "../public/static/images/dev-nick-wave.png",
     githubUrl: "https://github.com/user/project1",
   },
   {
     title: "Project 2",
     description:
       "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis",
-    imageUrl: "../public/static/images/stock.jpg",
+    imageUrl: "../public/static/images/dev-nick-wave.png",
     githubUrl: "https://github.com/user/project2",
   },
   {
