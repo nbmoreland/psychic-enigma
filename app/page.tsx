@@ -3,7 +3,7 @@
 import Image from "next/image";
 import ProjectSection from "./components/project/ProjectSection";
 import SkillSection from "./components/skill/SkillSection";
-import devnick from "../public/static/images/dev-nick-wave.png";
+import devnick from "../public/dev-nick-wave.png";
 
 import { motion } from "framer-motion";
 import { NavBar } from "./nav/navbar";
@@ -47,7 +47,7 @@ export default function Home() {
         <section className="snap-start min-h-screen bg-gray-50 dark:bg-gray-800">
           <ProjectSection
             showcase={true}
-            img={"/../public/static/images/dev-nick-wave.png"}
+            img={"/../public/dev-nick-wave.png"}
           />
         </section>
 

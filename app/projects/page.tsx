@@ -13,10 +13,7 @@ export default function ProjectsPage() {
       <main className="bg-white dark:bg-gray-900 min-h-screen">
         <NavBar />
 
-        <ProjectSection
-          showcase={false}
-          img={"/../public/static/images/stock.jpg"}
-        />
+        <ProjectSection showcase={false} img={"/../public/stock.jpg"} />
       </main>
     </div>
   );
