@@ -59,7 +59,13 @@ const projects = [
   },
 ];
 
-export default function ProjectSection({ showcase }: { showcase: boolean }) {
+export default function ProjectSection({
+  showcase,
+  img,
+}: {
+  showcase: boolean;
+  img: string;
+}) {
   let projects_displayed = projects;
 
   if (showcase) projects_displayed = projects.slice(0, 3);
@@ -85,7 +91,7 @@ export default function ProjectSection({ showcase }: { showcase: boolean }) {
             key={index}
             title={project.title}
             description={project.description}
-            imageUrl={project.imageUrl}
+            imageUrl={img}
             githubUrl={project.githubUrl}
           />
         ))}
