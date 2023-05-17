@@ -19,7 +19,7 @@ const NavBar = () => {
         >
           <Link
             href="/"
-            className="relative flex items-center py-1 px-1 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+            className="relative flex items-center py-1 px-1 rounded-lg text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900"
           >
             <Image
               src="https://avatars.githubusercontent.com/u/46201019?v=4"
@@ -28,7 +28,7 @@ const NavBar = () => {
               alt="Nick"
               className="overflow-hidden rounded-full py-1 px-1"
             />
-            <div className="flex flex-col pl-2 text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
+            <div className="flex flex-col pl-2 text-sm leading-6 font-medium text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900">
               <h1>Nicholas Moreland</h1>
             </div>
           </Link>
@@ -36,7 +36,8 @@ const NavBar = () => {
 
         <div className="ml-auto">
           <div className="block lg:hidden relative items-center mr-2 ">
-            <button
+            <motion.button
+              whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
               className="font-medium px-2 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
             >
@@ -45,17 +46,17 @@ const NavBar = () => {
               ) : (
                 <IoReorderThreeOutline className="fill-current h-6 w-6" />
               )}
-            </button>
+            </motion.button>
           </div>
         </div>
 
         {isOpen && (
-          <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl py-2 w-48 lg:flex items-center sm:mr-2">
+          <div className="absolute top-full right-0 mt-2 rounded-lg shadow-xl p-2 w-48 lg:flex items-center sm:mr-2 backdrop-blur border-slate-900/10 transition-colors duration-500 bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
             <ul className="flex flex-col">
               <motion.li whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/projects"
-                  className="block px-4 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                  className="rounded-xl block px-4 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-200 dark:hover:bg-slate-500"
                 >
                   Projects
                 </Link>
@@ -63,7 +64,7 @@ const NavBar = () => {
               <motion.li whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/resume"
-                  className="block px-4 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                  className="rounded-xl block px-4 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-200 dark:hover:bg-slate-500"
                 >
                   Resume
                 </Link>
@@ -71,7 +72,7 @@ const NavBar = () => {
               <motion.li whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/about"
-                  className="block px-4 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                  className="rounded-xl block px-4 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-200 dark:hover:bg-slate-500"
                 >
                   About
                 </Link>
@@ -86,7 +87,7 @@ const NavBar = () => {
               <motion.li whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/projects"
-                  className="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+                  className="font-medium px-3 py-2 rounded-lg text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900"
                 >
                   Projects
                 </Link>
@@ -94,7 +95,7 @@ const NavBar = () => {
               <motion.li whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/resume"
-                  className="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+                  className="font-medium px-3 py-2 rounded-lg text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900"
                 >
                   Resume
                 </Link>
@@ -102,7 +103,7 @@ const NavBar = () => {
               <motion.li whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/about"
-                  className="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
+                  className="font-medium px-3 py-2 rounded-lg text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900"
                 >
                   About
                 </Link>

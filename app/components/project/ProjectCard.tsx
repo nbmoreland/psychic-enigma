@@ -27,8 +27,8 @@ export default function ProjectCard({
         />
       </div>
       <div className="p-4">
-        <h3 className="font-bold text-xl mb-2">{title}</h3>
-        <p className="text-gray-700 dark:text-gray-400 text-base">
+        <h3 className="font-bold text-xl mb-2 dark:text-white">{title}</h3>
+        <p className="text-gray-700 dark:text-gray-300 text-base">
           {description}
         </p>
       </div>
@@ -38,7 +38,7 @@ export default function ProjectCard({
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
           href="https://github.com/nicholasmoreland"
-          className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
+          className="ml-6 block text-slate-400 hover:text-slate-500"
         >
           <IoGitBranchOutline className="fill-current h-7 w-7" />
         </motion.a>
