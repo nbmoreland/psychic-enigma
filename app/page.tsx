@@ -7,16 +7,15 @@ import devnick from "../public/dev-nick-wave.png";
 
 import { motion } from "framer-motion";
 import { NavBar } from "./nav/navbar";
-import { useContext } from "react";
-import { DarkModeContext } from "./components/DarkModeContext";
+import { useState } from "react";
 
 export default function Home() {
-  const { darkMode } = useContext(DarkModeContext);
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white dark:bg-gray-900">
-        <NavBar />
+        <NavBar dark={darkMode} />
 
         <section className="snap-start min-h-screen">
           <div className="mx-auto max-w-7xl mt-12 py-12 px-4 sm:px-6 lg:py-16 lg:px-8">

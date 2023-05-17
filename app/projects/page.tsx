@@ -1,17 +1,13 @@
 "use client";
 
 import { NavBar } from "../nav/navbar";
-import { useContext } from "react";
-import { DarkModeContext } from "../components/DarkModeContext";
 import ProjectSection from "../components/project/ProjectSection";
 
-export default function ProjectsPage() {
-  const { darkMode } = useContext(DarkModeContext);
-
+export default function ProjectsPage({ dark }: { dark: boolean }) {
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div className={dark ? "dark" : ""}>
       <main className="bg-white dark:bg-gray-900 min-h-screen">
-        <NavBar />
+        <NavBar dark={dark} />
 
         <ProjectSection showcase={false} />
       </main>
