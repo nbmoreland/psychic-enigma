@@ -1,69 +1,80 @@
+import { useEffect, useState } from "react";
+import { StaticImageData } from "next/image";
 import ProjectCard from "./ProjectCard";
+import psychic from "../../../public/psychic.png";
 import stockcard from "../../../public/stock.jpg";
+
+interface Project {
+  title: string;
+  description: string;
+  image_src: StaticImageData;
+  github_uri: string;
+
+  name: string;
+}
 
 const projects = [
   {
-    title: "Project 1",
+    title: "Psychic Enigma",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget.",
-    imageUrl: "/../public/static/images/dev-nick-wave.png",
-    githubUrl: "https://github.com/user/project1",
+      "A personal showcase of my software development skills. Built with TailwindCSS, React, and Next.js, it features a collection of recent projects highlighting my expertise in creating intuitive UIs, responsive layouts, and high-performance web applications.",
+    image_src: psychic,
+    github_uri: "psychic-enigma",
   },
   {
-    title: "Project 2",
+    title: "Project Cherry API",
     description:
-      "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis. Aiacs aw oecae.",
-    imageUrl: "/../public/static/images/dev-nick-wave.png",
-    githubUrl: "https://github.com/user/project2",
+      "This project showcases an Express.js API for managing users, leveraging MongoDB for data storage. Integration of key modules, including Express, MongoDB, CORS, and JSON data parsing, provides routes for user-related operations, allowing seamless handling of user data through HTTP requests.",
+    image_src: stockcard,
+    github_uri: "project-cherry-api",
   },
   {
-    title: "Project 3",
+    title: "Project Cherry Frontend",
     description:
       "Nullam ac elit nec metus porttitor dignissim. Etiam ac lacus interdum, bibendum augue a, pharetra ante.",
-    imageUrl: "../public/static/images/stock.jpg",
-    githubUrl: "https://github.com/user/project3",
+    image_src: stockcard,
+    github_uri: "project-cherry-frontend",
   },
   {
-    title: "Project 4",
+    title: "Juice",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget.",
-    imageUrl: "../public/static/images/stock.jpg",
-    githubUrl: "https://github.com/user/project1",
+    image_src: stockcard,
+    github_uri: "Juice",
   },
   {
-    title: "Project 5",
+    title: "RPN Calculator",
     description:
       "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis. Aiacs aw oecae.",
-    imageUrl: "../public/static/images/stock.jpg",
-    githubUrl: "https://github.com/user/project2",
-  },
-  {
-    title: "Project 6",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget.",
-    imageUrl: "../public/static/images/stock.jpg",
-    githubUrl: "https://github.com/user/project1",
-  },
-  {
-    title: "Project 7",
-    description:
-      "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis. Aiacs aw oecae.",
-    imageUrl: "../public/static/images/stock.jpg",
-    githubUrl: "https://github.com/user/project2",
-  },
-  {
-    title: "Project 8",
-    description:
-      "Nullam ac elit nec metus porttitor dignissim. Etiam ac lacus interdum, bibendum augue a, pharetra ante.",
-    imageUrl: "../public/static/images/stock.jpg",
-    githubUrl: "https://github.com/user/project3",
+    image_src: stockcard,
+    github_uri: "rpn-calculator",
   },
 ];
 
 export default function ProjectSection({ showcase }: { showcase: boolean }) {
-  let projects_displayed = projects;
+  const [projectData, setProjectData] = useState<Project[]>([]);
 
-  if (showcase) projects_displayed = projects.slice(0, 3);
+  useEffect(() => {
+    const fetchData = async () => {
+      const data: Project[] = [];
+      for (const project of projects) {
+        const response = await fetch(
+          `https://api.github.com/repos/nicholasmoreland/${project.github_uri}`
+        );
+        const projectData: Project = await response.json();
+        data.push({ ...project, name: projectData.name });
+      }
+      setProjectData(data);
+    };
+
+    fetchData();
+  }, []);
+
+  let projects_displayed = projectData;
+
+  if (showcase) projects_displayed = projectData.slice(0, 3);
+
+  console.log(projects_displayed);
 
   return (
     <div className="mx-auto min-w-screen pt-12 pb-2 px-2 lg:py-16 lg:px-8">
@@ -84,10 +95,10 @@ export default function ProjectSection({ showcase }: { showcase: boolean }) {
         {projects_displayed.map((project, index) => (
           <ProjectCard
             key={index}
-            title={project.title}
+            title={project.name}
             description={project.description}
-            image_uri={stockcard}
-            githubUrl={project.githubUrl}
+            image_src={project.image_src as StaticImageData}
+            github_uri={project.github_uri}
           />
         ))}
       </div>
