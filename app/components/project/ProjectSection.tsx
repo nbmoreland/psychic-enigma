@@ -74,8 +74,6 @@ export default function ProjectSection({ showcase }: { showcase: boolean }) {
 
   if (showcase) projects_displayed = projectData.slice(0, 3);
 
-  console.log(projects_displayed);
-
   return (
     <div className="mx-auto min-w-screen pt-12 pb-2 px-2 lg:py-16 lg:px-8">
       <div className="lg:text-center">
