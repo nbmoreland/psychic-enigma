@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import ProjectSection from "./components/project/ProjectSection";
 import SkillSection from "./components/skill/SkillSection";

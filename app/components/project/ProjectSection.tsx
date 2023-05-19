@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { StaticImageData } from "next/image";
 import ProjectCard from "./ProjectCard";

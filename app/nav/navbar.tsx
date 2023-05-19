@@ -14,7 +14,7 @@ const NavBar = () => {
 
   return (
     <div className={theme == "dark" ? "dark" : ""}>
-      <div className="max-w-8xl mx-auto sticky top-0 z-40 w-full backdrop-blur flex-none py-2 border-b border-slate-900/10 px-2 lg:border-0 lg:mx-0 transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
+      <div className="max-w-8xl mx-auto sticky top-0 w-full backdrop-blur flex-none py-2 border-b border-slate-900/10 px-2 lg:border-0 lg:mx-0 transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
         <div className="flex items-center">
           <motion.div
             whileTap={{ scale: 0.95 }}
@@ -57,28 +57,35 @@ const NavBar = () => {
             <div className="absolute top-full right-0 mt-2 rounded-lg shadow-xl p-2 w-48 lg:flex items-center sm:mr-2 backdrop-blur border-slate-900/10 transition-colors duration-500 bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
               <ul className="flex flex-col">
                 <motion.li whileTap={{ scale: 0.95 }}>
-                  <Link
-                    href="/projects"
-                    className="rounded-xl block px-4 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-200 dark:hover:bg-slate-500"
-                  >
-                    Projects
+                  <Link href="/projects">
+                    <p className="font-medium px-3 py-2 rounded-lg text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900">
+                      Projects
+                    </p>
                   </Link>
                 </motion.li>
                 <motion.li whileTap={{ scale: 0.95 }}>
-                  <Link
-                    href="/resume"
-                    className="rounded-xl block px-4 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-200 dark:hover:bg-slate-500"
-                  >
-                    Resume
+                  <Link href="/resume">
+                    <p className="font-medium px-3 py-2 rounded-lg text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900">
+                      Resume
+                    </p>
                   </Link>
                 </motion.li>
                 <motion.li whileTap={{ scale: 0.95 }}>
-                  <Link
-                    href="/about"
-                    className="rounded-xl block px-4 py-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-200 dark:hover:bg-slate-500"
-                  >
-                    About
+                  <Link href="/about">
+                    <p className="font-medium px-3 py-2 rounded-lg text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900">
+                      About
+                    </p>
                   </Link>
+                </motion.li>
+                <motion.li
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() =>
+                    theme == "dark" ? setTheme("light") : setTheme("dark")
+                  }
+                >
+                  <p className="font-medium px-3 py-2 rounded-lg text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900">
+                    Toggle
+                  </p>
                 </motion.li>
               </ul>
             </div>
