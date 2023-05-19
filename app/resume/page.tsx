@@ -4,14 +4,16 @@ import { NavBar } from "../nav/navbar";
 
 export default function ResumePage() {
   return (
-    <main className="bg-white dark:bg-gray-900">
+    <main className="bg-white dark:bg-gray-900 min-h-screen">
       <NavBar />
 
-      <section className="min-h-screen">
-        <div className="lg:flex gap-10 mx-4 my-4">
-          <h1>Welcome to the resume page</h1>
+      <div className="mx-auto min-w-screen pt-12 pb-2 px-2 lg:py-16 lg:px-8">
+        <div className="lg:text-center">
+          <h2 className="text-base text-indigo-600 dark:text-indigo-400 font-semibold tracking-wide uppercase">
+            Resume
+          </h2>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
