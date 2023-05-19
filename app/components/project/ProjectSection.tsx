@@ -23,7 +23,7 @@ const projects = [
   {
     title: "Project Cherry API",
     description:
-      "This project showcases an Express.js API for managing users, leveraging MongoDB for data storage. Integration of key modules, including Express, MongoDB, CORS, and JSON data parsing, provides routes for user-related operations, allowing seamless handling of user data through HTTP requests.",
+      "An Express.js API for managing users while leveraging MongoDB for data storage. CORS and JSON data parsing allowing seamless handling of user data through HTTP requests.",
     image_src: stockcard,
     github_uri: "project-cherry-api",
   },
