@@ -7,13 +7,13 @@ import devnick from "../public/dev-nick-wave.png";
 
 import { motion } from "framer-motion";
 import { NavBar } from "./nav/navbar";
-import { useState } from "react";
+import { useTheme } from "next-themes";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const { theme } = useTheme();
 
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div className={theme == "dark" ? "dark" : ""}>
       <main className="bg-white dark:bg-gray-900">
         <NavBar />
 
