@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { StaticImageData } from "next/image";
 import ProjectCard from "./ProjectCard";
-import psychiccard from "../../../public/psychic.png";
 import stockcard from "../../../public/stock.jpg";
 
 interface Project {
@@ -18,7 +17,7 @@ const projects = [
     title: "Psychic Enigma",
     description:
       "A personal showcase of my software development skills. Built with TailwindCSS, React, and Next.js, it features a collection of recent projects highlighting my expertise in creating intuitive UIs, responsive layouts, and high-performance web applications.",
-    image_src: psychiccard,
+    image_src: stockcard,
     github_uri: "psychic-enigma",
   },
   {
