@@ -5,50 +5,32 @@ import { StaticImageData } from "next/image";
 import ProjectCard from "./ProjectCard";
 import stockcard from "../../../public/stock.jpg";
 
+import typescript from "../../../public/icons/typescript.svg";
+import javascript from "../../../public/icons/javascript.svg";
+import css3 from "../../../public/icons/css3.svg";
+import react from "../../../public/icons/react.svg";
+import nextjs from "../../../public/icons/nextjs.svg";
+import express from "../../../public/icons/express.svg";
+
 interface Project {
   title: string;
-  description: string;
-  image_src: StaticImageData;
   github_uri: string;
-
-  name: string;
+  image_src: StaticImageData;
+  icons: StaticImageData[];
 }
 
 const projects = [
   {
     title: "Psychic Enigma",
-    description:
-      "A personal showcase of my software development skills. Built with TailwindCSS, React, and Next.js, it features a collection of recent projects highlighting my expertise in creating intuitive UIs, responsive layouts, and high-performance web applications.",
-    image_src: stockcard,
     github_uri: "psychic-enigma",
+    image_src: stockcard,
+    icons: [typescript, javascript, css3, react, nextjs],
   },
   {
     title: "Project Cherry API",
-    description:
-      "An Express.js API for managing users while leveraging MongoDB for data storage. CORS and JSON data parsing allowing seamless handling of user data through HTTP requests.",
-    image_src: stockcard,
     github_uri: "project-cherry-api",
-  },
-  {
-    title: "Project Cherry Frontend",
-    description:
-      "Nullam ac elit nec metus porttitor dignissim. Etiam ac lacus interdum, bibendum augue a, pharetra ante.",
     image_src: stockcard,
-    github_uri: "project-cherry-frontend",
-  },
-  {
-    title: "Juice",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales bibendum purus, et fringilla lacus volutpat eget.",
-    image_src: stockcard,
-    github_uri: "Juice",
-  },
-  {
-    title: "RPN Calculator",
-    description:
-      "Vivamus at augue ut turpis bibendum blandit. Fusce vel dolor sit amet est faucibus mattis. Aiacs aw oecae.",
-    image_src: stockcard,
-    github_uri: "rpn-calculator",
+    icons: [javascript, express],
   },
 ];
 
@@ -63,7 +45,7 @@ export default function ProjectSection({ showcase }: { showcase: boolean }) {
           `https://api.github.com/repos/nicholasmoreland/${project.github_uri}`
         );
         const projectData: Project = await response.json();
-        data.push({ ...project, name: projectData.name });
+        data.push({ ...project, ...projectData });
       }
       setProjectData(data);
     };
@@ -94,10 +76,10 @@ export default function ProjectSection({ showcase }: { showcase: boolean }) {
         {projects_displayed.map((project, index) => (
           <ProjectCard
             key={index}
-            title={project.name}
-            description={project.description}
+            showcased={showcase}
+            title={project.title}
             image_src={project.image_src as StaticImageData}
-            github_uri={project.github_uri}
+            icons_src={project.icons as StaticImageData[]}
           />
         ))}
       </div>

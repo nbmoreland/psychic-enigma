@@ -1,17 +1,16 @@
 import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
-import { AiOutlineGithub } from "react-icons/ai";
 
 export default function ProjectCard({
+  showcased,
   title,
-  description,
   image_src,
-  github_uri,
+  icons_src,
 }: {
+  showcased: boolean;
   title: string;
-  description: string;
   image_src: StaticImageData;
-  github_uri: string;
+  icons_src: StaticImageData[];
 }) {
   const requestData = async () => {
     const res = await fetch("https://api.github.com/users/nicholasmoreland");
@@ -34,7 +33,10 @@ export default function ProjectCard({
   return (
     <motion.div
       whileHover={{ scale: 1.1 }}
-      className="bg-white dark:bg-gray-900 rounded-lg shadow-xl overflow-hidden w-96 h-128 m-4 shrink-0"
+      className={
+        (showcased ? "dark:bg-gray-900" : "bg-white dark:bg-gray-800") +
+        " rounded-lg shadow-xl overflow-hidden w-96 h-128 m-4 shrink-0"
+      }
     >
       <div className="relative h-48">
         <Image
@@ -44,21 +46,21 @@ export default function ProjectCard({
           style={{ objectFit: "cover" }}
         />
       </div>
-      <div className="p-4">
+      <div className="px-4 pt-4 pb-2">
         <h3 className="font-bold text-xl mb-2 dark:text-white">{title}</h3>
-        <p className="text-gray-700 dark:text-gray-300 text-base mb-auto">
-          {description}
-        </p>
-
-        <div className="fixed bottom-0 right-0 p-1.5 mx-2 mt-4 mb-2 ml-6">
-          <motion.a
-            whileTap={{ scale: 0.9 }}
-            href={"https://github.com/nicholasmoreland/" + github_uri}
-            className="text-slate-400 hover:text-slate-500"
-          >
-            <AiOutlineGithub className="fill-current h-7 w-7" />
-          </motion.a>
-        </div>
+      </div>
+      <div className="flex flex-row px-4 pb-4 space-x-3">
+        {icons_src.map((icon, index) => {
+          return (
+            <Image
+              key={index}
+              src={icon}
+              alt="Project Icon"
+              width={36}
+              height={36}
+            />
+          );
+        })}
       </div>
     </motion.div>
   );
