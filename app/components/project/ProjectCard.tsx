@@ -52,13 +52,15 @@ export default function ProjectCard({
       <div className="flex flex-row px-4 pb-4 space-x-3">
         {icons_src.map((icon, index) => {
           return (
-            <Image
-              key={index}
-              src={icon}
-              alt="Project Icon"
-              width={36}
-              height={36}
-            />
+            <motion.div whileHover={{ scale: 1.2 }}>
+              <Image
+                key={index}
+                src={icon}
+                alt="Project Icon"
+                width={36}
+                height={36}
+              />
+            </motion.div>
           );
         })}
       </div>
